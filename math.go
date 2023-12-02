@@ -46,9 +46,9 @@ func (d Decimal) PowFrac(num, denom int) Decimal {
 
 // Max returns the value closest to positive infinity.
 func Max(first Decimal, others ...Decimal) Decimal {
-	for _, dd := range others {
-		if first.LessThan(dd) {
-			first = dd
+	for _, d := range others {
+		if first.LessThan(d) {
+			first = d
 		}
 	}
 	return first
